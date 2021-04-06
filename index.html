@@ -7,64 +7,255 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <title>HTML AND CSS CHEAT SHEET (INFOGRAPHIC) | Bluehost Blog</title>
+  <style>
+    .hover-blue {
+      cursor: pointer;
+    }
+    .hover-blue:hover {
+      color: #3575d3;
+    }
+    nav a.nav-link {
+      color: #464646 !important;
+      font-weight: bold;
+    }
+    .title {
+      font-weight: bolder;
+      color: #3d4e5e;
+      font-size: 67px;
+      line-height: 86px;
+    }
+  </style>
 </head>
 
-<body>
-  <div class="container mt-5 mb-5">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">bluehostblog</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-          aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarScroll">
-          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Bluehost
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>            
-            <li class="nav-item">
-              <a class="nav-link" href="#">Bluehost News</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Product Updates</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Customer Spotlight</a>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search Bluehost" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+<body class="bg-light">
+  <header>
+    <div class="container mt-5 mb-5">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMTcuMjkgNDkuODEiPgogIDxkZWZzLz4KICA8ZGVmcy8+CiAgPGcgaWQ9IkxheWVyXzIiIGRhdGEtbmFtZT0iTGF5ZXIgMiI+CiAgICA8ZyBpZD0iTGF5ZXJfMS0yIiBkYXRhLW5hbWU9IkxheWVyIDEiPgogICAgICA8ZyBpZD0iYmx1ZWhvc3QtYmxvZyIgZGF0YS1uYW1lPSJHcm91cCAxNjAzIj4KICAgICAgICA8ZyBpZD0ibG9nbyIgZGF0YS1uYW1lPSJCbHVlaG9zdCBMb2dvIj4KICAgICAgICAgIDxwYXRoIGZpbGw9IiMzNTc1ZDMiIGlkPSJMb2dvIiBkPSJNMTIwLjg5IDE0LjM0aC40MmM2LjA2LjE1IDEwLjIzIDUgOS42MyAxMnYuNDRoLTE4LjVhOC45MyA4LjkzIDAgMDA4Ljc3IDkuMDkgMi42MiAyLjYyIDAgMDAuMjggMGguNTFhMTQuMTQgMTQuMTQgMCAwMDYuMjctMS41NWwuNDQtLjIzLjkgMi4xNmExNi4yNCAxNi4yNCAwIDAxLTcuNjQgMmgtLjU3Yy03LjcyLS4yNi0xMS42OC02LjM1LTExLjQyLTEyLjg4LjIzLTcuMDggNS4zNC0xMS4wMyAxMC45MS0xMS4wM3pNNTYuMTggMS42NXYxNS41NmExMS41NCAxMS41NCAwIDAxNy42Mi0yLjk0YzUuMTEgMCAxMCAzLjUgMTAgMTIgMCA4LjczLTUuNTQgMTItMTEuNDcgMTJhMTcuNyAxNy43IDAgMDEtOC43NS0yLjRWMS42NXptMTU0LjEzIDUuMjN2Ny43OGg3LjYydjIuMTloLTcuNjJ2MTIuNjhjMCAzLjczIDEuNTkgNi4xNSA0Ljk0IDYuMjhhOS4zNSA5LjM1IDAgMDA0LjMyLS45bC43NCAyLjI3YTE0IDE0IDAgMDEtNS4xMSAxYy00LjE1IDAtNy40NC0yLjU1LTcuNDQtOC41VjE2Ljg1aC00LjEydi0yLjE5aDQuMTJWNi44OHptLTQwLjEgNy40MmM1LjkzIDAgMTEuMDcgNC40MyAxMS4wNyAxMS45MyAwIDcuNjctNS4xNyAxMi0xMS4wNyAxMi02LjYyIDAtMTEuMDctNS4zNi0xMS4wNy0xMiAwLTcgNC45MS0xMS45MyAxMS4wNy0xMS45M3ptLTgwLjkzLjM2VjI4LjhjMCA1LjUyIDIuNjkgNyA1LjM3IDcgMyAwIDUuNzgtMS45MSA3LjkyLTUuMDdWMTQuNjZoMi41NnYyMy4xOWgtMi41NnYtNC40OWExMC44NiAxMC44NiAwIDAxLTguNzQgNC44NWMtMy42MyAwLTcuMS0yLjA5LTcuMS05LjE1di0xNC40em0xMDQuMjQtLjMxYTEzLjU5IDEzLjU5IDAgMDE2LjM5IDEuNjVsLTEgMmExMS40MyAxMS40MyAwIDAwLTUuMzQtMS4zN2MtMy44MSAwLTUuNTIgMS44OS01LjUyIDMuODQgMCAyLjUgMi44MSAzLjQzIDYuMzcgNC45IDUuNTQgMi4xOSA2LjcyIDQuNjkgNi43MiA2LjgzIDAgMy42My0zLjM4IDUuOTItNy44NSA1LjkyYTE0LjMxIDE0LjMxIDAgMDEtNy4yOS0yLjA1bDEuMS0yLjIyYTExIDExIDAgMDA2LjEzIDJjMi40IDAgNS40LTEgNS4zNy0zLjQ1IDAtMi4wOS0yLjItMy43MS01LjcyLTUuMS0zLjkyLTEuNTctNy4zNC0zLTcuMzQtNi43MnMzLjQ2LTYuMjMgNy45OC02LjIzem0tNTQuMy0xMi43djE3LjU0YTEwLjI1IDEwLjI1IDAgMDE4LjQ0LTQuODljNC42IDAgNy4zMSAzLjUgNy4zMSA4LjY4djE0Ljg3aC0yLjUzVjIzLjUyYzAtNS0yLjU2LTYuOC01LjMyLTYuODItMy4zNSAwLTYuMzQgMi42LTcuOSA1LjIzdjE1LjkyaC0yLjU1VjEuNjV6bS01OC40NSAwdjM2LjJoLTIuNDVWMS42MnptLTE3LjIgMTVhMTAuMyAxMC4zIDAgMDAtNy4zOSAzLjYxdjE0LjE4YTEzLjM1IDEzLjM1IDAgMDA2IDEuNTNjNC43IDAgOS4wOC0yLjc5IDkuMDgtOS43MiAwLTYuMS0zLjM3LTkuNjEtNy42OS05LjYxem0xMDYuNjQuMDZjLTUuNSAwLTguNDkgNC4zOC04LjQ5IDkuNTNzMyA5LjU4IDguNDkgOS41OGM1LjM0IDAgOC41MS00LjQ4IDguNTEtOS41OHMtMy4xNC05LjUzLTguNTEtOS41M3ptLTQ5LjQzIDBhOC4yNSA4LjI1IDAgMDAtOC4yMSA3LjY2di4zOWgxNmE3LjYxIDcuNjEgMCAwMC03LjE1LThoLS41OXoiIGNsYXNzPSJjbHMtMSIvPgogICAgICAgICAgPHBhdGggZmlsbD0iIzM1NzVkMyIgaWQ9Ikljb24iIGQ9Ik0zOC42MyAyOC4xM1YzOUgyNy44NFYyOC4xM3ptLTEzLjkyIDBWMzlIMTMuOTJWMjguMTN6bS0xMy45MiAwVjM5SDBWMjguMTN6bTI3Ljg0LTE0LjA3djEwLjg4SDI3Ljg0VjE0LjA2em0tMTMuOTIgMHYxMC44OEgxMy45MlYxNC4wNnptLTEzLjkyIDB2MTAuODhIMFYxNC4wNnpNMzguNjMgMHYxMC44N0gyNy44NFYwek0yNC43MSAwdjEwLjg3SDEzLjkyVjB6TTEwLjc5IDB2MTAuODdIMFYweiIgY2xhc3M9ImNscy0xIi8+CiAgICAgICAgPC9nPgogICAgICAgIDxnIGlkPSJibG9nIiBjbGFzcz0iY2xzLTIiPgogICAgICAgICAgPGcgY2xhc3M9ImNscy0yIj4KICAgICAgICAgICAgPHBhdGggZmlsbD0iIzM1NzVkMyIgZD0iTTI0MS4xMSAxNC4yNmE4LjQ0IDguNDQgMCAwMTcuMDggMy4yOWMxLjY5IDIuMiAyLjU0IDUuMjkgMi41NCA5LjI1cy0uODYgNy4wOS0yLjU3IDkuMzFhOS4zNiA5LjM2IDAgMDEtMTQuMzEgMGgtLjM1bC0uOTQgMi44OWgtMy44N1Y0LjgxaDUuMTZ2OC4xM2MwIC42IDAgMS40OS0uMDggMi42OHMtLjExIDEuOTQtLjEzIDIuMjZoLjIxYTguMjMgOC4yMyAwIDAxNy4yNi0zLjYyem0tMS4zNCA0LjIyYTUuMjcgNS4yNyAwIDAwLTQuNSAxLjgzYy0uOTEgMS4yMy0xLjM5IDMuMjctMS40MiA2LjE0di4zNWMwIDMgLjQ3IDUuMTEgMS40MSA2LjQzYTUuMjIgNS4yMiAwIDAwNC41OSAyQTQuNjYgNC42NiAwIDAwMjQ0IDMzYTExLjU0IDExLjU0IDAgMDAxLjQxLTYuMjhxLjAyLTguMjQtNS42NC04LjI0ek0yNjEuODkgMzloLTUuMTZWNC44MWg1LjE2ek0yOTAuODMgMjYuOHEwIDYtMy4wNSA5LjNjLTIgMi4yMy00Ljg3IDMuMzQtOC41MSAzLjM0YTExLjYyIDExLjYyIDAgMDEtNi0xLjU0IDEwLjE2IDEwLjE2IDAgMDEtNC00LjQyIDE1IDE1IDAgMDEtMS40MS02LjY4cTAtNS44OSAzLTkuMjJ0OC41NC0zLjMyYTEwLjcxIDEwLjcxIDAgMDE4LjM1IDMuMzlxMy4wOCAzLjQxIDMuMDggOS4xNXptLTE3LjY5IDBxMCA4LjQzIDYuMjIgOC40MnQ2LjE1LTguNDJxMC04LjMyLTYuMTktOC4zMmE1LjMxIDUuMzEgMCAwMC00LjcyIDIuMTUgMTEgMTEgMCAwMC0xLjQ2IDYuMTd6TTMxNy4yOSAxNC43djIuODNsLTQuMTYuNzdhNi42OCA2LjY4IDAgMDEuOTUgMS44OSA3LjQ0IDcuNDQgMCAwMS4zNyAyLjM3IDcuMjUgNy4yNSAwIDAxLTIuNTkgNS45MSAxMC44MyAxMC44MyAwIDAxLTcuMTQgMi4xNiAxMS4yOSAxMS4yOSAwIDAxLTIuMTEtLjE4IDIuOSAyLjkgMCAwMC0xLjY3IDIuNDIgMS4zNCAxLjM0IDAgMDAuNzggMS4yNSA2LjcgNi43IDAgMDAyLjg3LjQyaDQuMjRxNCAwIDYuMSAxLjcxYTYgNiAwIDAxMi4wOSA1IDcuMTkgNy4xOSAwIDAxLTMuNCA2LjM3cS0zLjQyIDIuMjQtOS44NSAyLjI0LTUgMC03LjU4LTEuNzZhNS42OCA1LjY4IDAgMDEtMi42MS01IDUuMzYgNS4zNiAwIDAxMS40Mi0zLjgzIDcuNzEgNy43MSAwIDAxNC0yLjEyIDMuOCAzLjggMCAwMS0xLjctMS40MSAzLjU4IDMuNTggMCAwMS0uNjctMi4wNiAzLjUyIDMuNTIgMCAwMS43Ny0yLjMxIDguODkgOC44OSAwIDAxMi4yOC0xLjg2IDYuNzUgNi43NSAwIDAxLTMuMDYtMi42NSA3LjcyIDcuNzIgMCAwMS0xLjE4LTQuMyA3LjcyIDcuNzIgMCAwMTIuNDktNi4xM3EyLjUtMi4xNyA3LjExLTIuMTdhMTguNDggMTguNDggMCAwMTIuMTcuMTQgMTUuMDcgMTUuMDcgMCAwMTEuNy4zem0tMTkuMSAyOC4wOGEyLjgzIDIuODMgMCAwMDEuNTEgMi41NyA4LjI2IDguMjYgMCAwMDQuMjMuOSAxMi43MiAxMi43MiAwIDAwNi4yOC0xLjI1IDMuNjEgMy42MSAwIDAwMi4wNy0zLjIxIDIuNDEgMi40MSAwIDAwLTEuMTQtMi4yNSA5LjEzIDkuMTMgMCAwMC00LjItLjY3SDMwM2E1LjQ3IDUuNDcgMCAwMC0zLjUgMS4xMyAzLjQxIDMuNDEgMCAwMC0xLjMxIDIuNzh6bTIuMjItMjAuMjJhNC44NiA0Ljg2IDAgMDAxLjE4IDMuNTIgNC40MyA0LjQzIDAgMDAzLjQxIDEuMjNxNC40OSAwIDQuNDgtNC43OWE1LjQ1IDUuNDUgMCAwMC0xLjExLTMuNjYgNC4yIDQuMiAwIDAwLTMuMzctMS4yOCA0LjM1IDQuMzUgMCAwMC0zLjQgMS4yNyA1LjQgNS40IDAgMDAtMS4xOSAzLjcxeiIgY2xhc3M9ImNscy0xIi8+CiAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgICA8L2c+CiAgICA8L2c+CiAgPC9nPgo8L3N2Zz4=" alt="" height="30" class="d-inline-block align-text-top">
+          </a>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Bluehost
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Bluehost News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Product Updates</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Customer Spotlight</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search Bluehost" aria-label="Search">
+              <button class="btn btn-outline" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+              </svg></button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1 class="title">HTML AND CSS CHEAT SHEET (INFOGRAPHIC)</h1>
         </div>
       </div>
-    </nav>
-  </div>
+    </div>
+  </section>
 
-  <div class="container">
+  <section>
+    <div class="container mt-5">
+      <div class="text-center"><i><a href="#" style="text-decoration: none; color: inherit;">Andrew Brown</a> / March 02, 2015</i></div>
+    </div>
+  </section>
+
+  <section class="container text-center mt-5">
+    <img class="img-fluid" style="width: 100%; max-width: 1024px;" src="images/html.jpg" alt="">
+  </section>
+
+  <section class="container text-left mt-5">
     <div class="row">
-      <div class="col-12 text-center">
-        <h1>HTML AND CSS CHEAT SHEET (INFOGRAPHIC)</h1>
+      <div class="mx-auto" style="width: 100%; max-width: 740px;">
+        <p class="h4">Designing your own website can take a lot of time and effort. At Bluehost we help to make that process easier.
+          That’s why we offer WordPress and Weebly web-builders as part your hosting package. Even with these tools, it is
+          important to know some basic coding when building your website.
+          <br>
+          If you haven’t used HTML and CSS before, or if you consider yourself a beginner, take some time to familiarize
+          yourself with these basic coding languages using this cheat sheet.</p>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="container mt-5">
-    <div class="text-center"><a href="#">Andrew Brown</a> / March 02, 2015</div>
-  </div>
-  
+  <section class="container text-center mt-5 mb-5">
+    <img class="img-fluid" style="width: 100%; max-width: 740px;" src="images/HTML-CSS-Cheat-sheet-1.0-01.png" alt="">
+  </section>
+
+  <section class="col-md-9 col-sm-11 mx-auto mb-5">
+    <div id="teste123" class="text-white text-center py-5 mb-5" style="background-color:#3575d3;">
+      <h1 class="mb-3">Build the Website of Your Dreams with Bluehost</h1>
+      <button type="button" class="btn btn-lg btn-light" style="border-radius: 30px; color:#3575d3;">Get
+        Started</button>
+    </div>
+    <div class="mb-5" style="border-top: 1.2px solid gray;">
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <img class="rounded-circle" src="./images/a0560b89199156b26924fcfa3f9c4a44.png" alt="" width="120px"
+          height="120px" style="float: left; margin-right: 20px;">
+        <h2 class="text-black"><b>Andrew Brown</b> | <i>Staff</i></h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="row">
+
+      <div class="col-12 mb-2">
+        <h1>Leave a comment</h1>
+      </div>
+
+      <!-- LEAVE A COMMMENT FORM -->
+      <div class="col-12" style="background-color: #eff2f7;">
+        <p class="h5 mt-3 mb-3">Your email address will not be published. Required fields are marked*</p>
+        <form class="mt-2">
+          <div class="mb-3">
+            <label for="formcomment" class="form-label h3">Comment*</label>
+            <textarea id="formcomment" class="form-control" rows="4" required></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="formname" class="form-label h3">Name*</label>
+            <input type="text" style="max-width: 700px;" class="form-control" id="formname" required>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label h3">Email*</label>
+            <input type="email" style="max-width: 700px;" class="form-control" id="exampleInputEmail1" required>
+          </div>
+          <div class="mb-3">
+            <label for="formwebsite" class="form-label h3">Wesite*</label>
+            <input type="text" style="max-width: 700px;" class="form-control" id="formwebsite" required>
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label h4" for="exampleCheck1">Save my name, email and website in the browser for the next time I comment.</label>
+          </div>
+          <div class="col-12 text-center mb-5 mt-5">
+            
+            <button type="submit" class="btn btn-lg btn-primary" style="border-radius: 30px;">Post Comment</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="row p-5">
+      <div class="col-12 text-center mb-5">
+        <span class="h3"><i>Related Posts</i></span>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12 mb-4">
+        <div class="hover-blue" style="background-color: rgba(237,240,246,.76); padding: 40px 25px 40px 25px; min-height: 260px;">
+          <i>Andrew Brown / May 27, 2015</i>
+          <h2>Why You Should Learn Basic Coding Skills</h2>
+          GENERAL
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12 mb-4">
+        <div class="hover-blue" style="background-color: rgba(237,240,246,.76); padding: 40px 25px 40px 25px; min-height: 260px;">
+          <i>Desiree Johnson / September 17, 2018</i>
+          <h2>How to Make a Custom WordPress Theme</h2>
+          GENERAL
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12 mb-4">
+        <div class="hover-blue" style="background-color: rgba(237,240,246,.76); padding: 40px 25px 40px 25px; min-height: 260px;">
+          <i>Bluehost / October 5, 2016</i>
+          <h2>[Video] What is a Website and How Does it Work?</h2>
+          GENERAL
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="mb-3">
+    <!-- SOCIAL -->
+    <div class="col-12 mx-auto text-center">
+      <a class="mx-2" style="text-decoration: none;" href="#">
+        <img width="30px" height="30px"
+          src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTIzLjk5ODEgMTEuOTk5MWMwLTYuNjI2OTQtNS4zNzIxLTExLjk5OTEtMTEuOTk5LTExLjk5OTEtNi42MjY5NCAwLTExLjk5OTEgNS4zNzIxNi0xMS45OTkxIDExLjk5OTEgMCA1Ljk4OTEgNC4zODc4OSAxMC45NTMxIDEwLjEyNDIgMTEuODUzM3YtOC4zODQ4aC0zLjA0NjYydi0zLjQ2ODVoMy4wNDY2MnYtMi42NDM1N2MwLTMuMDA3MjcgMS43OTE0LTQuNjY4MzkgNC41MzIyLTQuNjY4MzkgMS4zMTI4IDAgMi42ODYuMjM0MzUgMi42ODYuMjM0MzV2Mi45NTI5aC0xLjUxM2MtMS40OTA2IDAtMS45NTU1LjkyNDk0LTEuOTU1NSAxLjg3Mzg1djIuMjUwODZoMy4zMjc5bC0uNTMyIDMuNDY4NWgtMi43OTU5djguMzg0OGM1LjczNjQtLjkwMDIgMTAuMTI0Mi01Ljg2NDIgMTAuMTI0Mi0xMS44NTMzeiIgZmlsbD0iIzQwN2NkNSIvPjwvc3ZnPg=="
+          alt="">
+      </a>
+      <a class="mx-2" style="text-decoration: none;" href="#">
+        <img width="30px" height="30px"
+          src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTIzLjk1NCA0LjU2OWMtLjg4NS4zODktMS44My42NTQtMi44MjUuNzc1IDEuMDE0LS42MTEgMS43OTQtMS41NzQgMi4xNjMtMi43MjMtLjk1MS41NTUtMi4wMDUuOTU5LTMuMTI3IDEuMTg0LS44OTYtLjk1OS0yLjE3My0xLjU1OS0zLjU5MS0xLjU1OS0yLjcxNyAwLTQuOTIgMi4yMDMtNC45MiA0LjkxNyAwIC4zOS4wNDUuNzY1LjEyNyAxLjEyNC00LjA5LS4xOTMtNy43MTUtMi4xNTctMTAuMTQxLTUuMTI2LS40MjcuNzIyLS42NjYgMS41NjEtLjY2NiAyLjQ3NSAwIDEuNzEuODcgMy4yMTMgMi4xODggNC4wOTYtLjgwNy0uMDI2LTEuNTY2LS4yNDgtMi4yMjgtLjYxNnYuMDYxYzAgMi4zODUgMS42OTMgNC4zNzQgMy45NDYgNC44MjctLjQxMy4xMTEtLjg0OS4xNzEtMS4yOTYuMTcxLS4zMTQgMC0uNjE1LS4wMy0uOTE2LS4wODYuNjMxIDEuOTUzIDIuNDQ1IDMuMzc3IDQuNjA0IDMuNDE3LTEuNjggMS4zMTktMy44MDkgMi4xMDUtNi4xMDIgMi4xMDUtLjM5IDAtLjc3OS0uMDIzLTEuMTctLjA2NyAyLjE4OSAxLjM5NCA0Ljc2OCAyLjIwOSA3LjU1NyAyLjIwOSA5LjA1NCAwIDEzLjk5OS03LjQ5NiAxMy45OTktMTMuOTg2IDAtLjIwOSAwLS40Mi0uMDE1LS42My45NjEtLjY4OSAxLjgtMS41NiAyLjQ2LTIuNTQ4eiIgZmlsbD0iIzQwN2NkNSIvPjwvc3ZnPg=="
+          alt="">
+      </a>
+      <a class="mx-2" style="text-decoration: none;" href="#">
+        <img width="30px" height="30px"
+          src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTIzLjQ5NSA2LjIwNWEzLjAwNyAzLjAwNyAwIDAgMCAtMi4wODgtMi4wODhjLTEuODctLjUwMS05LjM5Ni0uNTAxLTkuMzk2LS41MDFzLTcuNTA3LS4wMS05LjM5Ni41MDFhMy4wMDcgMy4wMDcgMCAwIDAgLTIuMDg4IDIuMDg4IDMxLjI0NyAzMS4yNDcgMCAwIDAgLS41MjIgNS44MDUgMzEuMjQ3IDMxLjI0NyAwIDAgMCAuNTIyIDUuNzgzIDMuMDA3IDMuMDA3IDAgMCAwIDIuMDg4IDIuMDg4YzEuODY4LjUwMiA5LjM5Ni41MDIgOS4zOTYuNTAyczcuNTA2IDAgOS4zOTYtLjUwMmEzLjAwNyAzLjAwNyAwIDAgMCAyLjA4OC0yLjA4OCAzMS4yNDcgMzEuMjQ3IDAgMCAwIC41LTUuNzgzIDMxLjI0NyAzMS4yNDcgMCAwIDAgLS41LTUuODA1em0tMTMuODg2IDkuMzk2di03LjE5M2w2LjI2NCAzLjYwMnoiIGZpbGw9IiM0MDdjZDUiLz48L3N2Zz4="
+          alt="">
+      </a>
+      <a class="mx-2" style="text-decoration: none;" href="#">
+        <img width="30px" height="30px"
+          src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTIwLjQ0NyAyMC40NTJoLTMuNTU0di01LjU2OWMwLTEuMzI4LS4wMjctMy4wMzctMS44NTItMy4wMzctMS44NTMgMC0yLjEzNiAxLjQ0NS0yLjEzNiAyLjkzOXY1LjY2N2gtMy41NTR2LTExLjQ1MmgzLjQxNHYxLjU2MWguMDQ2Yy40NzctLjkgMS42MzctMS44NSAzLjM3LTEuODUgMy42MDEgMCA0LjI2NyAyLjM3IDQuMjY3IDUuNDU1djYuMjg2em0tMTUuMTEtMTMuMDE5Yy0xLjE0NCAwLTIuMDYzLS45MjYtMi4wNjMtMi4wNjUgMC0xLjEzOC45Mi0yLjA2MyAyLjA2My0yLjA2MyAxLjE0IDAgMi4wNjQuOTI1IDIuMDY0IDIuMDYzIDAgMS4xMzktLjkyNSAyLjA2NS0yLjA2NCAyLjA2NXptMS43ODIgMTMuMDE5aC0zLjU2NHYtMTEuNDUyaDMuNTY0em0xNS4xMDYtMjAuNDUyaC0yMC40NTRjLS45NzkgMC0xLjc3MS43NzQtMS43NzEgMS43Mjl2MjAuNTQyYzAgLjk1Ni43OTIgMS43MjkgMS43NzEgMS43MjloMjAuNDUxYy45NzggMCAxLjc3OC0uNzczIDEuNzc4LTEuNzI5di0yMC41NDJjMC0uOTU1LS44LTEuNzI5LTEuNzc4LTEuNzI5eiIgZmlsbD0iIzQwN2NkNSIvPjwvc3ZnPg=="
+          alt="">
+      </a>
+      <a class="mx-2" style="text-decoration: none;" href="#">
+        <img width="30px" height="30px"
+          src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTEyLjAxNyAwYy02LjYyMSAwLTExLjk4OCA1LjM2Ny0xMS45ODggMTEuOTg3IDAgNS4wNzkgMy4xNTggOS40MTcgNy42MTggMTEuMTYyLS4xMDUtLjk0OS0uMTk5LTIuNDAzLjA0MS0zLjQzOS4yMTktLjkzNyAxLjQwNi01Ljk1NyAxLjQwNi01Ljk1N3MtLjM1OS0uNzItLjM1OS0xLjc4MWMwLTEuNjYzLjk2Ny0yLjkxMSAyLjE2OC0yLjkxMSAxLjAyNCAwIDEuNTE4Ljc2OSAxLjUxOCAxLjY4OCAwIDEuMDI5LS42NTMgMi41NjctLjk5MiAzLjk5Mi0uMjg1IDEuMTkzLjYgMi4xNjUgMS43NzUgMi4xNjUgMi4xMjggMCAzLjc2OC0yLjI0NSAzLjc2OC01LjQ4NyAwLTIuODYxLTIuMDYzLTQuODY5LTUuMDA4LTQuODY5LTMuNDEgMC01LjQwOSAyLjU2Mi01LjQwOSA1LjE5OSAwIDEuMDMzLjM5NCAyLjE0My44ODkgMi43NDEuMDk5LjEyLjExMi4yMjUuMDg1LjM0NS0uMDkuMzc1LS4yOTMgMS4xOTktLjMzNCAxLjM2My0uMDUzLjIyNS0uMTcyLjI3MS0uNDAxLjE2NS0xLjQ5NS0uNjktMi40MzMtMi44NzgtMi40MzMtNC42NDYgMC0zLjc3NiAyLjc0OC03LjI1MiA3LjkyLTcuMjUyIDQuMTU4IDAgNy4zOTIgMi45NjcgNy4zOTIgNi45MjMgMCA0LjEzNS0yLjYwNyA3LjQ2Mi02LjIzMyA3LjQ2Mi0xLjIxNCAwLTIuMzU0LS42MjktMi43NTgtMS4zNzlsLS43NDkgMi44NDhjLS4yNjkgMS4wNDUtMS4wMDQgMi4zNTItMS40OTggMy4xNDYgMS4xMjMuMzQ1IDIuMzA2LjUzNSAzLjU1LjUzNSA2LjYwNyAwIDExLjk4NS01LjM2NSAxMS45ODUtMTEuOTg3IDAtNi42MjMtNS4zNzgtMTEuOTg3LTExLjk4NS0xMS45ODd6IiBmaWxsPSIjNDA3Y2Q1Ii8+PC9zdmc+"
+          alt="">
+      </a>
+      <a class="mx-2" style="text-decoration: none;" href="#">
+        <img width="30px" height="30px"
+          src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTEyIDBjLTMuMjYgMC0zLjY2Ny4wMTUtNC45NDcuMDcyLTEuMjc4LjA2LTIuMTQ4LjI2MS0yLjkxMy41NTgtLjc4OS4zMDYtMS40NTkuNzE3LTIuMTI2IDEuMzg0cy0xLjA3OSAxLjMzNi0xLjM4NCAyLjEyNmMtLjI5Ny43NjUtLjQ5OSAxLjYzNS0uNTU4IDIuOTEzLS4wNiAxLjI4LS4wNzIgMS42ODctLjA3MiA0Ljk0N3MuMDE1IDMuNjY3LjA3MiA0Ljk0N2MuMDYgMS4yNzcuMjYxIDIuMTQ4LjU1OCAyLjkxMy4zMDYuNzg4LjcxNyAxLjQ1OSAxLjM4NCAyLjEyNi42NjcuNjY2IDEuMzM2IDEuMDc5IDIuMTI2IDEuMzg0Ljc2Ni4yOTYgMS42MzYuNDk5IDIuOTEzLjU1OCAxLjI4LjA2IDEuNjg3LjA3MiA0Ljk0Ny4wNzJzMy42NjctLjAxNSA0Ljk0Ny0uMDcyYzEuMjc3LS4wNiAyLjE0OC0uMjYyIDIuOTEzLS41NTguNzg4LS4zMDYgMS40NTktLjcxOCAyLjEyNi0xLjM4NC42NjYtLjY2NyAxLjA3OS0xLjMzNSAxLjM4NC0yLjEyNi4yOTYtLjc2NS40OTktMS42MzYuNTU4LTIuOTEzLjA2LTEuMjguMDcyLTEuNjg3LjA3Mi00Ljk0N3MtLjAxNS0zLjY2Ny0uMDcyLTQuOTQ3Yy0uMDYtMS4yNzctLjI2Mi0yLjE0OS0uNTU4LTIuOTEzLS4zMDYtLjc4OS0uNzE4LTEuNDU5LTEuMzg0LTIuMTI2LS42NjctLjY2Ny0xLjMzNS0xLjA3OS0yLjEyNi0xLjM4NC0uNzY1LS4yOTctMS42MzYtLjQ5OS0yLjkxMy0uNTU4LTEuMjgtLjA2LTEuNjg3LS4wNzItNC45NDctLjA3MnptMCAyLjE2YzMuMjAzIDAgMy41ODUuMDE2IDQuODUuMDcxIDEuMTcuMDU1IDEuODA1LjI0OSAyLjIyNy40MTUuNTYyLjIxNy45Ni40NzcgMS4zODIuODk2LjQxOS40Mi42NzkuODE5Ljg5NiAxLjM4MS4xNjQuNDIyLjM2IDEuMDU3LjQxMyAyLjIyNy4wNTcgMS4yNjYuMDcgMS42NDYuMDcgNC44NXMtLjAxNSAzLjU4NS0uMDc0IDQuODVjLS4wNjEgMS4xNy0uMjU2IDEuODA1LS40MjEgMi4yMjctLjIyNC41NjItLjQ3OS45Ni0uODk5IDEuMzgyLS40MTkuNDE5LS44MjQuNjc5LTEuMzguODk2LS40Mi4xNjQtMS4wNjUuMzYtMi4yMzUuNDEzLTEuMjc0LjA1Ny0xLjY0OS4wNy00Ljg1OS4wNy0zLjIxMSAwLTMuNTg2LS4wMTUtNC44NTktLjA3NC0xLjE3MS0uMDYxLTEuODE2LS4yNTYtMi4yMzYtLjQyMS0uNTY5LS4yMjQtLjk2LS40NzktMS4zNzktLjg5OS0uNDIxLS40MTktLjY5LS44MjQtLjktMS4zOC0uMTY1LS40Mi0uMzU5LTEuMDY1LS40Mi0yLjIzNS0uMDQ1LTEuMjYtLjA2MS0xLjY0OS0uMDYxLTQuODQ0IDAtMy4xOTYuMDE2LTMuNTg2LjA2MS00Ljg2MS4wNjEtMS4xNy4yNTUtMS44MTQuNDItMi4yMzQuMjEtLjU3LjQ3OS0uOTYuOS0xLjM4MS40MTktLjQxOS44MS0uNjg5IDEuMzc5LS44OTguNDItLjE2NiAxLjA1MS0uMzYxIDIuMjIxLS40MjEgMS4yNzUtLjA0NSAxLjY1LS4wNiA0Ljg1OS0uMDZsLjA0NS4wM3ptMCAzLjY3OGMtMy40MDUgMC02LjE2MiAyLjc2LTYuMTYyIDYuMTYyIDAgMy40MDUgMi43NiA2LjE2MiA2LjE2MiA2LjE2MiAzLjQwNSAwIDYuMTYyLTIuNzYgNi4xNjItNi4xNjIgMC0zLjQwNS0yLjc2LTYuMTYyLTYuMTYyLTYuMTYyem0wIDEwLjE2MmMtMi4yMSAwLTQtMS43OS00LTRzMS43OS00IDQtNCA0IDEuNzkgNCA0LTEuNzkgNC00IDR6bTcuODQ2LTEwLjQwNWMwIC43OTUtLjY0NiAxLjQ0LTEuNDQgMS40NC0uNzk1IDAtMS40NC0uNjQ2LTEuNDQtMS40NHMuNjQ2LTEuNDM5IDEuNDQtMS40MzljLjc5My0uMDAxIDEuNDQuNjQ1IDEuNDQgMS40Mzl6IiBmaWxsPSIjNDA3Y2Q1Ii8+PC9zdmc+"
+          alt="">
+      </a>
+    </div>
+    <div class="col-12 text-center mt-5" style="color:#3575d3;">
+      <p>Copyright 2021 Bluehost Inc. All rights reserved.</p>
+    </div>
+    <div class="row text-center">
+      <div class="col-8 mx-auto">
+        <div class="row">
+          <div class="col-sm-4">
+            <a style="text-decoration: none;" href="#">About Bluehost</a>
+          </div>
+          <div class="col-sm-4">
+            <a style="text-decoration: none;" href="#">Privacy Policy</a>
+          </div>
+          <div class="col-sm-4">
+            <a style="text-decoration: none;" href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
   <script src="./js/bootstrap.bundle.min.js"></script>
 </body>
 
